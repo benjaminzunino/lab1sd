@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "lab1/notificaciones";
+
+service NumberService {
+  rpc SendNumber(NumberRequest) returns (NumberResponse);
+}
+
+message NumberRequest {
+  int32 number = 1;
+}
+
+message NumberResponse {
+  string acknowledgment = 1;
+}
